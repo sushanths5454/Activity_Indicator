@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		848E4C022C14C06F00F44BF3 /* AntiClockwiseIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E4C012C14C06F00F44BF3 /* AntiClockwiseIndicatorView.swift */; };
+		848E4C042C14C8F500F44BF3 /* ClockwiseIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E4C032C14C8F500F44BF3 /* ClockwiseIndicatorView.swift */; };
 		84E9CAF02C0B369E00B46927 /* ActivityLoaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E9CAEF2C0B369E00B46927 /* ActivityLoaderApp.swift */; };
 		84E9CAF22C0B369E00B46927 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E9CAF12C0B369E00B46927 /* ContentView.swift */; };
 		84E9CAF42C0B36A300B46927 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84E9CAF32C0B36A300B46927 /* Assets.xcassets */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		848E4C012C14C06F00F44BF3 /* AntiClockwiseIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntiClockwiseIndicatorView.swift; sourceTree = "<group>"; };
+		848E4C032C14C8F500F44BF3 /* ClockwiseIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockwiseIndicatorView.swift; sourceTree = "<group>"; };
 		84E9CAEC2C0B369E00B46927 /* ActivityLoader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActivityLoader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E9CAEF2C0B369E00B46927 /* ActivityLoaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityLoaderApp.swift; sourceTree = "<group>"; };
 		84E9CAF12C0B369E00B46927 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +75,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		848E4C002C14C02200F44BF3 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				848E4C012C14C06F00F44BF3 /* AntiClockwiseIndicatorView.swift */,
+				848E4C032C14C8F500F44BF3 /* ClockwiseIndicatorView.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
 		84E9CAE32C0B369E00B46927 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +107,7 @@
 		84E9CAEE2C0B369E00B46927 /* ActivityLoader */ = {
 			isa = PBXGroup;
 			children = (
+				848E4C002C14C02200F44BF3 /* CustomView */,
 				84E9CAEF2C0B369E00B46927 /* ActivityLoaderApp.swift */,
 				84E9CAF12C0B369E00B46927 /* ContentView.swift */,
 				84E9CAF32C0B36A300B46927 /* Assets.xcassets */,
@@ -257,8 +271,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				848E4C022C14C06F00F44BF3 /* AntiClockwiseIndicatorView.swift in Sources */,
 				84E9CAF22C0B369E00B46927 /* ContentView.swift in Sources */,
 				84E9CAF02C0B369E00B46927 /* ActivityLoaderApp.swift in Sources */,
+				848E4C042C14C8F500F44BF3 /* ClockwiseIndicatorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

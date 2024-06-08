@@ -1,5 +1,7 @@
+
+
 //
-//  ContentView.swift
+//  AntiClockwiseIndicatorView.swift
 //  ActivityLoader
 //
 //  Created by Sushanth on 01/06/24.
@@ -7,16 +9,16 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct AntiClockwiseIndicatorView: View {
     @State var progress = 0.0
     @State var progress1 = 0.0
    
     private func startAnimation() {
            withAnimation(Animation.linear(duration: 1.0)) {
-               progress = 1
+               progress = 0
            }
            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-               progress = 0.0
+               progress = 1.0
                startAnimation()
            }
     }
@@ -50,7 +52,7 @@ struct ContentView: View {
 //                        .stroke(Color.white, lineWidth: 5)
 //                        .rotationEffect(Angle(degrees: -90))
 //                       // .frame(width: 100, height: 100)
-//                    
+//
 //                    Circle()
 //                        .trim(from: 0.2, to: progress)
 //                        .stroke(Color.red, lineWidth: 5)
@@ -126,5 +128,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    AntiClockwiseIndicatorView()
 }
