@@ -34,93 +34,50 @@ struct ContentView: View {
     var body: some View {
         
         ZStack {
-            var viewHeight = 10.0
-            ForEach(1..<5) { index in
+            var viewHeight = 2.0
+            ForEach(1..<11) { index in
                 ZStack {
-                    
-                    Circle()
-                        .trim(from: 0.0, to: progress)
-                        .stroke(Color.red, lineWidth: 5)
-                       // .frame(width: 16, height: 16)
-                        //.offset(x: 0, y: 200)
-                        .rotationEffect(Angle(degrees: Double(-180 * index)))
-                    
-//                    Circle()
-//                        .trim(from: 0.1, to: progress1)
-//                        .stroke(Color.white, lineWidth: 5)
-//                        .rotationEffect(Angle(degrees: -90))
-//                       // .frame(width: 100, height: 100)
-//                    
-//                    Circle()
-//                        .trim(from: 0.2, to: progress)
-//                        .stroke(Color.red, lineWidth: 5)
-//                       // .frame(width: 16, height: 16)
-//                        //.offset(x: 0, y: 200)
-//                        .rotationEffect(Angle(degrees: -90))
-//                    Circle()
-//                        .trim(from: 0.3, to: progress1)
-//                        .stroke(Color.white, lineWidth: 5)
-//                        .rotationEffect(Angle(degrees: -90))
-//                       // .frame(width: 100, height: 100)
-//                    Circle()
-//                        .trim(from: 0.4, to: progress)
-//                        .stroke(Color.red, lineWidth: 5)
-//                       // .frame(width: 16, height: 16)
-//                        //.offset(x: 0, y: 200)
-//                        .rotationEffect(Angle(degrees: -90))
-//                    Circle()
-//                        .trim(from: 0.5, to: progress1)
-//                        .stroke(Color.white, lineWidth: 5)
-//                        .rotationEffect(Angle(degrees: -90))
-//                       // .frame(width: 100, height: 100)
-//                    Circle()
-//                        .trim(from: 0.6, to: progress)
-//                        .stroke(Color.red, lineWidth: 5)
-//                       // .frame(width: 16, height: 16)
-//                        //.offset(x: 0, y: 200)
-//                        .rotationEffect(Angle(degrees: -90))
-//                    Circle()
-//                        .trim(from: 0.7, to: progress1)
-//                        .stroke(Color.white, lineWidth: 5)
-//                        .rotationEffect(Angle(degrees: -90))
-//                       // .frame(width: 100, height: 100)
-//                    Circle()
-//                        .trim(from: 0.8, to: progress)
-//                        .stroke(Color.red, lineWidth: 5)
-//                       // .frame(width: 16, height: 16)
-//                        //.offset(x: 0, y: 200)
-//                        .rotationEffect(Angle(degrees: -90))
-//                    Circle()
-//                        .trim(from: 0.9, to: progress1)
-//                        .stroke(Color.white, lineWidth: 5)
-//                        .rotationEffect(Angle(degrees: -90))
-                    
-                } .frame(width: viewHeight * (5 * Double(index)), height: viewHeight * (5 * Double(index)))
-                   // .rotationEffect(Angle(degrees: index / 2 == 0 ?  -80 : -90))
+                    switch index {
+                    case 1:                        ClockwiseIndicatorView( repeatCount: 4)
+                            .frame(width: viewHeight * (6 * Double(index)), height: viewHeight * (6 * Double(index)))
+                    case 2:
+                        AntiClockwiseIndicatorView(progress: 0.0, progress1: 0.0, repeatCount: 4)
+                            .frame(width: viewHeight * (5 * Double(index)), height: viewHeight * (5 * Double(index)))
+                    case 3:
+                        ClockwiseIndicatorView( repeatCount: 9)
+                            .frame(width: viewHeight * (6 * Double(index)), height: viewHeight * (5 * Double(index)))
+                    case 4:
+                        AntiClockwiseIndicatorView(progress: 0.0, progress1: 0.0, repeatCount: 9)
+                            .frame(width: viewHeight * (5 * Double(index)), height: viewHeight * (5 * Double(index)))
+                    case 5:
+                        ClockwiseIndicatorView( repeatCount: 7)
+                            .frame(width: viewHeight * (6 * Double(index)), height: viewHeight * (5 * Double(index)))
+                    case 6:
+                        AntiClockwiseIndicatorView(progress: 0.0, progress1: 0.0, repeatCount: 2)
+                            .frame(width: viewHeight * (5 * Double(index)), height: viewHeight * (5 * Double(index)))
+                    case 7:
+                        ClockwiseIndicatorView(repeatCount: 4)
+                            .frame(width: viewHeight * (6 * Double(index)), height: viewHeight * (5 * Double(index)))
+                    case 8:
+                        AntiClockwiseIndicatorView(progress: 0.0, progress1: 0.0, repeatCount: 6)
+                            .frame(width: viewHeight * (5 * Double(index)), height: viewHeight * (5 * Double(index)))
+                    case 9:
+                        ClockwiseIndicatorView(repeatCount: 3)
+                            .frame(width: viewHeight * (6 * Double(index)), height: viewHeight * (5 * Double(index)))
+                    case 10:
+                        AntiClockwiseIndicatorView(progress: 0.0, progress1: 0.0, repeatCount: 2)
+                            .frame(width: viewHeight * (5 * Double(index)), height: viewHeight * (5 * Double(index)))
+                        
+                        
+                        
+                    default:
+                        AntiClockwiseIndicatorView(progress: 0.0, progress1: 0.0, repeatCount: 2)
+                            .frame(width: viewHeight * (5 * Double(index)), height: viewHeight * (5 * Double(index)))
+                    }
+                }
             }
-        
-           
-    
-                
-            
-               // .frame(width: 100, height: 100)
-            
-            
-            
-                
         }
-        .onAppear(perform: {
-            
-            startAnimation()
-            startAnimationfForSecondCircle()
-//
-//            withAnimation(Animation.linear(duration: 1.0).repeatForever(autoreverses: true)) {
-//                               progress = 1.0
-//                           }
-
-          //  progress = 0.40
-        })
-        
+        .frame(width: 150, height: 150)
         .padding()
     }
 }
